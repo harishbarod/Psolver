@@ -13,6 +13,7 @@
 
 
     <title>search</title>
+
     <style>
       body{
         background-color: #5a4b5830 !important;
@@ -38,6 +39,19 @@
 }
 .h1{
   font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and (max-width:768px) {
+  #aboutimg{
+    margin-top: 6rem;}
+}
+@media screen and (max-width:425px) {
+  #aboutimg{
+width: 90vw;
+height: 50vh;
+margin-right: .25rem !important;
+
+  }
 }
 
 

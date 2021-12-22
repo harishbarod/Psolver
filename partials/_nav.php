@@ -9,6 +9,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>nav</title>
+<style>
+@media only screen and (max-width:768px){
+#searchform{
+margin: 1rem;
+}
+.me-2{
+  margin-left: -1rem;
+}
+.form-control {
+    
+    width: 20rem !important;
+
+
+}
+}
+
+
+</style>
+
+
+  
+
   </head>
   <body>
 
@@ -19,7 +41,7 @@
 echo'
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> Psolver</a>
+    <a class="navbar-brand" href="index.php"> Psolver</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,18 +85,18 @@ echo'
   echo' <h5 class="mt-2 text-light" > '.$_SESSION['username'].'</h5>';
         $alertloggedin=true;}
 
-      echo'<form action="search.php?query" method="GET" class="d-flex mx-3">
-        <input class="form-control me-2" type="search" id= "query" name= "query" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      echo'<form id="searchform" action="search.php?query" method="GET" class="d-flex mx-3">
+        <input class="searchcolor form-control me-2" type="search" id= "query" name= "query" placeholder="Search" aria-label="Search">
+        <button class="search btn btn-outline-success" type="submit">Search</button>
       </form>';
        
       if($alertloggedin){
         echo '<a href="partials/_logout.php"><button class="btn btn-success" type="submit">logout</button></a>
         ';}
       else{
-     echo'<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal" type="submit">SignUp</button>
+     echo'<button class="signup btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal" type="submit">SignUp</button>
 
-   <button class="btn btn-success mx-3" data-bs-toggle="modal" data-bs-target="#loginModal"type="submit">login</button>';}
+   <button class="login btn btn-success mx-3" data-bs-toggle="modal" data-bs-target="#loginModal"type="submit">login</button>';}
     echo'</div>
   </div>
 </nav>' 
@@ -91,6 +113,8 @@ include 'partials/_loginmodal.php';
 
 
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

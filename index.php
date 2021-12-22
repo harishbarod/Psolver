@@ -9,7 +9,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Psolver</title>
+
+    <style>
+     @media only screen and (max-width:768px){
+
+.col-md-4 {
+    width: 50% !important;
+}
+}
+     @media only screen and (max-width:425px){
+
+.col-md-4 {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+} 
+    </style>
   </head>
+
   <body>
  <?php
  include 'partials/_nav.php';
@@ -118,8 +138,8 @@ while($row=mysqli_fetch_assoc($result)){
 $category_name= $row['category_name'];
 $category_description= substr($row['category_description'],0,80); 
 
-echo ' <div class="col-md-4 mt-4">
-<div class="card " style="width: 18rem;">
+echo ' <div class="cardinrow col-md-4 mt-4">
+<div class="card" style="width: 18rem;">
 <a  href="threadlist.php?category_id='.$category_id.'" >
 <img src="img card/'.$category_id.'.png" height="200px" class="card-img-top" alt="..."> </a>
 <div class="card-body">
