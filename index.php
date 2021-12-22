@@ -11,6 +11,9 @@
     <title>Psolver</title>
 
     <style>
+      #category_title{
+  text-decoration: none;
+}
      @media only screen and (max-width:768px){
 
 .col-md-4 {
@@ -26,6 +29,7 @@
     justify-content: center;
 
 }
+
 } 
     </style>
   </head>
@@ -143,7 +147,7 @@ echo ' <div class="cardinrow col-md-4 mt-4">
 <a  href="threadlist.php?category_id='.$category_id.'" >
 <img src="img card/'.$category_id.'.png" height="200px" class="card-img-top" alt="..."> </a>
 <div class="card-body">
-<h5 class="card-title"> <a class= "text-dark" href="threadlist.php?category_id='.$category_id.'">'.$category_name .'</a></h5>
+<h5 class="card-title"> <a  class= "text-dark" id ="category_title" href="threadlist.php?category_id='.$category_id.'"> <strong>'.$category_name .'</strong></a></h5>
 <p class="card-text">'.$category_description.'...</p>
 <a href="threadlist.php?category_id='.$category_id .'" class="btn btn-primary">View Threads</a>
 </div>
