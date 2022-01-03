@@ -48,7 +48,7 @@ $thread_description=$_POST['thread_description'];
 $thread_description= str_replace('<','&lt;', $thread_description);
 $thread_description= str_replace('>','&gt;', $thread_description);
 $thread_user_id=$_POST['thread_user_id'];
-$sql= "INSERT INTO `threads` (`thread_title`, `thread_description`, `thread_cat_id`,`thread_user_id`, `thread_time`) VALUES ('$thread_title','$thread_description', '$thread_cat_id','$thread_user_id', current_timestamp())";
+$sql= "INSERT INTO `threads` (`thread_title`, `thread_description`, `thread_cat_id`,`thread_user_id`, `thread_time`) VALUES ('$thread_title','$thread_description', '$thread_cat_id','$thread_user_id', current_timestamp())"; 
 $result=mysqli_query($conn,$sql);
 $showAlertthread=true;
 
@@ -58,7 +58,7 @@ $showAlertthread=true;
 <?php
 // Alerts are here
 if($showAlertthread){
-  echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  echo '<div class="m-0 alert alert-success alert-dismissible fade show" role="alert">
   <strong>Success!</strong> Your thread has been inserted successfully.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>

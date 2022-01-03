@@ -62,7 +62,7 @@ echo '
 
   if($search){
  echo '<div class="container "><div class="jumbotron ">
-    <h2 class="display-4 mx-4 ">no search result found</em></h2></div></div>';
+    <h2 class="display-4 mx-4 ">no search result found </h2><br> <h4>  Please try with different keyword </h4> </em></div></div>';
   
   }
  
